@@ -1,0 +1,29 @@
+class Superhero:
+    def __init__(self, name, superpower, origin):
+        self.name = name
+        self.superpower = superpower
+        self.origin = origin
+
+    def introduce(self):
+        print(f"I am {self.name} from {self.origin}. My power is {self.superpower}!")
+
+    def use_power(self):
+        print(f"{self.name} uses their superpower: {self.superpower}!")
+
+class FlyingHero(Superhero):
+    def __init__(self, name, superpower, origin, flight_speed):
+        super().__init__(name, superpower, origin)
+        self.flight_speed = flight_speed
+
+    def use_power(self):
+        print(f"{self.name} soars through the skies at {self.flight_speed} km/h using {self.superpower}!")
+
+# Test
+hero1 = Superhero("ShadowBlade", "Invisibility", "Moon City")
+hero2 = FlyingHero("SkyFlash", "Wind Control", "Sky Island", 750)
+
+hero1.introduce()
+hero1.use_power()
+
+hero2.introduce()
+hero2.use_power()
